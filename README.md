@@ -1,2 +1,0 @@
-# ChartIssue
-Created with CodeSandbox
