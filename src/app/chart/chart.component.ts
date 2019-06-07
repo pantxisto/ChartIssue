@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, AfterViewInit } from "@angular/core";
 import * as Highcharts from "highcharts/highstock";
 declare var require: any;
 require("highcharts/modules/export-data");
@@ -9,7 +9,7 @@ require("highcharts/modules/exporting");
   templateUrl: "./chart.component.html",
   styleUrls: ["./chart.component.css"]
 })
-export class ChartComponent implements OnInit {
+export class ChartComponent implements OnInit, AfterViewInit {
   chart: Highcharts.Chart;
   serie1: any;
   serie2: any;
@@ -18,7 +18,7 @@ export class ChartComponent implements OnInit {
     this.chart = undefined;
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.chart = Highcharts.stockChart("container", {
       chart: {
         width: null,
