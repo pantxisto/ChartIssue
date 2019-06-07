@@ -56,8 +56,8 @@ export class ChartComponent implements OnInit {
 
     setInterval(() => {
       const timestamp = new Date().getTime();
-      const value1 = Math.floor(Math.random() * 250) + 150;
-      const value2 = Math.floor(Math.random() * 250) + 150;
+      const value1 = Math.random() * (250 - 150) + 150;
+      const value2 = Math.random() * (250 - 150) + 150;
       this.serie1.addPoint([timestamp, parseFloat(value1.toString())], true);
       this.serie2.addPoint([timestamp, parseFloat(value2.toString())], true);
     }, 500);
