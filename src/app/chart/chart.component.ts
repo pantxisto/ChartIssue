@@ -48,6 +48,7 @@ export class ChartComponent implements OnInit, AfterViewInit {
       data: [new Date().getTime(), parseFloat(20)]
     };
     this.chart.addSeries(seriesPart2, true);
+    this.generateData();
   }
 
   generateData() {
